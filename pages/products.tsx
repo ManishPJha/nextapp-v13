@@ -1,7 +1,7 @@
 import { NextPageContext } from "next";
 import React, { Fragment, useEffect, useState } from "react";
 
-const products = (props: any) => {
+const ProductsPage = (props: any) => {
   const { data } = props;
 
   const [products, setProducts] = useState<Array<any>>([]);
@@ -31,7 +31,7 @@ const products = (props: any) => {
   );
 };
 
-export default products;
+export default ProductsPage;
 
 export const getServerSideProps = async (ctx: NextPageContext) => {
   const request = await fetch(
